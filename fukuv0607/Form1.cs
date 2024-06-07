@@ -2,15 +2,19 @@ namespace fukuv0607
 {
     public partial class Form1 : Form
     {
-        double vx = -4;
-        double vy = -4;
+        double vx = random.Next(-4,5);
+        double vy = random.Next(-4,5);
         int a = 0;
 
         int counter = 0;
+        static Random random = new Random();
 
         public Form1()
         {
             InitializeComponent();
+
+            label1.Left = random.Next(ClientSize.Width);
+            label1.Top = random.Next(ClientSize.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
