@@ -25,12 +25,12 @@ namespace fukuv0607
                 vy = -vy;
             }
 
-            if (label1.Left >= 740)
+            if (label1.Left +label1.Width> ClientSize.Width)
             {
                 vx = -vx;
             }
 
-            if (label1.Top >= 400)
+            if (label1.Top +label1.Height > ClientSize.Height)
             {
                 vy = -vy;
                 Application.Exit();
