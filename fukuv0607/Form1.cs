@@ -17,29 +17,29 @@ namespace fukuv0607
 
             if (label1.Left <= 0)
             {
-                vx = -vx;
+                vx = Math.Abs(vx);
             }
 
             if (label1.Top <= 0)
             {
-                vy = -vy;
+                vy = Math.Abs(vy);
             }
 
-            if (label1.Left +label1.Width> ClientSize.Width)
+            if (label1.Left + label1.Width > ClientSize.Width)
             {
-                vx = -vx;
+                vx = -Math.Abs(vx);
             }
 
-            if (label1.Top +label1.Height > ClientSize.Height)
+            if (label1.Top + label1.Height > ClientSize.Height)
             {
-                vy = -vy;
+                vy = -Math.Abs(vy);
                 Application.Exit();
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            vy = -vy;
+            vy = -Math.Abs(vy);
         }
 
 
