@@ -6,6 +6,8 @@ namespace fukuv0607
         double vy = -4;
         int a = 0;
 
+        int counter = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -13,10 +15,13 @@ namespace fukuv0607
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            counter++;
+            label5.Text = $"{counter}";
+
             var fpos = PointToClient(MousePosition);
             //label1.Text = $"{fpos.X},{fpos.Y}";
-            label4.Left = fpos.X;
-            label4.Top = fpos.Y;
+            //label4.Left = fpos.X;
+            //label4.Top = fpos.Y;
 
             label1.Left += (int)vx;
             label1.Top += (int)vy;
@@ -42,13 +47,16 @@ namespace fukuv0607
             if (label1.Top + label1.Height > ClientSize.Height)
             {
                 vy = -Math.Abs(vy);
-                //Application.Exit();
+                Application.Exit();
             }
 
-            if((label1.Left<fpos.X) && (label1.Top<fpos.Y) &&
-                (label1.Right>fpos.X) && (label1.Bottom>fpos.Y))
+            if ((fpos.X > label1.Left)
+                && (fpos.Y > label1.Top)
+                && (fpos.X < label1.Right)
+                && (fpos.Y < label1.Bottom))
             {
-                timer1.Enabled = false;
+                //timer1.Enabled = false;
+                vy = -Math.Abs(vy);
             }
         }
 

@@ -34,6 +34,8 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -77,21 +79,43 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Yu Gothic UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(325, 362);
+            label4.Location = new Point(314, 277);
             label4.Name = "label4";
-            label4.Size = new Size(105, 45);
+            label4.Size = new Size(124, 45);
             label4.TabIndex = 3;
-            label4.Text = "label4";
+            label4.Text = "________";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Yu Gothic UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(111, 365);
+            label5.Name = "label5";
+            label5.Size = new Size(32, 37);
+            label5.TabIndex = 4;
+            label5.Text = "0";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Yu Gothic UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(13, 371);
+            label6.Name = "label6";
+            label6.Size = new Size(109, 32);
+            label6.TabIndex = 5;
+            label6.Text = "カウント：";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(label4);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(label6);
+            Controls.Add(label2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -105,5 +129,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }
